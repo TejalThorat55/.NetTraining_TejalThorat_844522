@@ -1,0 +1,162 @@
+<html>
+	<head>
+		<title> New User Form </title>
+	</head>
+	<body>
+		<table cellpadding="5">
+			<form method="post" action="submitpageJS.html" onsubmit="return validate();" >		
+				<tr>
+					<th style="text-align:left">First Name</th>
+					<td style=color:red><input type="text" placeholder="Enter Full Name" id="fn" size=50px>* </td>
+				</tr>
+				<tr>
+					<th style="text-align:left">Age</th>
+					<td style=color:red><input type="text" placeholder="Enter Age" id="age" size=50px>* </td>					
+				</tr>
+				<tr>
+					<th style="text-align:left">Login Name</th>
+					<td style=color:red><input type="text" placeholder="Enter Login Name" id="ln" size=50px>* </td>					
+				</tr>
+				<tr>
+					<th style="text-align:left">Password</th>
+					<td style=color:red><input type="password" placeholder="Enter Password" id="pwd" size=50px >* </td>
+					<td style="text-align:left"><input type="Checkbox" name="ck1"> Show Password </td>
+				</tr>
+				<tr>
+					<th style="text-align:left">Confirm Password</th>
+					<td style=color:red><input type="password" placeholder="Enter Confirm Password" id="cpwd" size=50px>* </td>
+					<td><input type="Checkbox" name="ck2"> Show Password </td>
+				</tr>
+				<tr>
+					<th style="text-align:left">Experience</th>
+					<td style=color:red><input type="text" placeholder="Enter Experience (in Years)" id="exp" size=50px>* </td>					
+				</tr>
+				<tr>
+					<th style="text-align:left">Salary Expected</th>
+					<td style=color:red><input type="text" placeholder="Enter Expected Salary" id="se" size=50px>* </td>					
+				</tr>
+			
+				<tr>
+					<th> <input type="submit" id="a" value="Add New User" style="background-color:lightgrey;">      
+					<input type="submit" id="b" value="Cancel" style="background-color:lightgrey;"> </th>
+				</tr>
+			</form>
+			<form method="post" onsubmit="return email()">
+				<tr>
+					<th> Subscribe to News Letters </th>
+				<tr>
+				<tr>
+					<th style="text-align:left">Email Id</th>
+					<td><input type="text" placeholder="example@example.com" id="eml" size=50px> <input type="submit" value="Subscribe" style="background-color:lightgrey;"> </td>					
+				</tr>
+			</form>
+		</table>
+		
+		<script type="text/javascript">
+			function validate() {
+				var fn = document.getElementById("fn").value;
+				var age = document.getElementById("age").value;
+				var ln = document.getElementById("ln").value;
+				var pwd = document.getElementById("pwd").value;
+				var cpwd = document.getElementById("cpwd").value;
+				var exp = document.getElementById("exp").value;
+				var se = document.getElementById("se").value;
+				var eml = document.getElementById("eml").value;
+
+				if (fn.length == 0) {
+					alert("First Name is required");	
+					return false;
+				}
+				if(age.length == 0) {
+					alert("Age is required");
+					return false;
+				}
+				if (ln.length == 0) {
+					alert("Login Name is required");	
+					return false;
+				}
+				if(pwd.length == 0) {
+					alert("Password is required");
+					return false;
+				}
+				if(cpwd.length == 0) {
+					alert("Confirm Password is required");
+					return false;
+				}
+				if(pwd != cpwd) {
+					alert("Password doesn\'t match, type correct Password");
+					return false;
+				}
+				if(exp.length == 0) {
+					alert("Experience is required");
+					return false;
+				}
+				if(se.length == 0) {
+					alert("Salary Expected is required");
+					return false;
+				}
+				return true;				
+			}
+			function email(){
+				var eml = document.getElementById("eml").value;
+				if(eml.length != 0) {
+					alert("You have Subscribed to news letters, Thank you!");
+				}
+			}
+		</script>
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--	<body>	
+		<form method="post" action="submitpageJS.html" onsubmit="return validateData();"> 
+			User Name: <input type="text" id="un">
+			<br> <br>
+			Password: <input type="password" id="pwd">
+			<br> <br>
+			<input type="submit" value="LOGIN">
+		</form>
+		<script type="text/javascript">
+			function validateData() {
+				var unstr = document.getElementById("un").value;
+				var pwstr = document.getElementById("pwd").value;
+				if (unstr.length == 0) {
+					alert("User Name is must");	
+					return false;
+				}
+				if(pwstr.length == 0) {
+					alert("Password is must");
+					return false;
+				}
+				return true;				
+			}
+		</script>
+	</body>
+</html> -->
