@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form method="post">
+        UserName:<input type="text" id="un" name="un"/>
+        <br />
+        Password:<input type="password" id="pwd" name="pwd"/>
+        <br />
+        <input type="submit" value="Login"/>
+        <h2>@ViewBag.msg</h2>
+    </form>
+</body>
+</html>
