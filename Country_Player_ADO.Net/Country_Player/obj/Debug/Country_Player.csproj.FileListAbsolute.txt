@@ -1,0 +1,7 @@
+C:\Users\admin\source\repos\Country_Player\Country_Player\bin\Debug\Country_Player.exe.config
+C:\Users\admin\source\repos\Country_Player\Country_Player\bin\Debug\Country_Player.exe
+C:\Users\admin\source\repos\Country_Player\Country_Player\bin\Debug\Country_Player.pdb
+C:\Users\admin\source\repos\Country_Player\Country_Player\obj\Debug\Country_Player.csprojResolveAssemblyReference.cache
+C:\Users\admin\source\repos\Country_Player\Country_Player\obj\Debug\Country_Player.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Country_Player\Country_Player\obj\Debug\Country_Player.exe
+C:\Users\admin\source\repos\Country_Player\Country_Player\obj\Debug\Country_Player.pdb
