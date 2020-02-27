@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<body>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <div>
+            <h3>Please Login Here....</h3>
+            <span>User Name&nbsp;&nbsp;:&nbsp;&nbsp;</span>@Html.TextBox("un") <br /><br />
+            <span>Password&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</span>@Html.Password("pwd") <br /><br />
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <input type="submit" value="LOGIN" />
+
+        </div>
+
+    }
+
+    <h2>@ViewBag.msg</h2>
+
+
+</body>
+</html>

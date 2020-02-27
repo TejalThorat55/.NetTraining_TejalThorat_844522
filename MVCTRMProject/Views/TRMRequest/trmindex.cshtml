@@ -1,0 +1,93 @@
+﻿@model List<MVCCodeTRMProject.Models.DataView>
+
+@{
+//Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>trmindex</title>
+</head>
+<body>
+    <div>
+        <h2>@ViewBag.msg</h2>
+        <br /><br />
+        <table border="1">
+            <tr>
+                <td>
+                    Request Id
+                </td>
+                <td>
+                    Request Name
+                </td>
+                <td>
+                    Skill
+                </td>
+                <td>
+                    Start Date
+                </td>
+                <td>
+                    End Date
+                </td>
+                <td>
+                    Status
+                </td>
+                <td>
+                    Executive Id
+                </td>
+                <td>
+                    Trainer Id
+                </td>
+                <td>
+                    .....
+                </td>
+            </tr>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>
+                        @i.RequestId
+                    </td>
+                    <td>
+                        @i.RequestName
+                    </td>
+                    <td>
+                        @i.Skill
+                    </td>
+                    <td>
+                        @i.StartDate
+                    </td>
+                    <td>
+                        @i.EndDate
+                    </td>
+                    <td>
+                        @i.Status
+                    </td>
+                    <td>
+                        @i.ExecId
+                    </td>
+                    <td>
+                        @i.TrainerId
+                    </td>
+                    <td>
+                        @{
+                            if (i.Status == "Assigned")
+                            {
+                                <a href="~/TRMRequest/trmindex2?rid=@i.RequestId"> Click Here </a>
+                            }
+                        }
+                    </td>
+                </tr>
+                            }
+
+        </table>
+        <br /><br />
+        <a href="~/TRMRequest/trmindex1">Add New Request</a>
+        <br /><br />
+        <a href="~/Home/Index"> Logout </a>
+    </div>
+</body>
+</html>

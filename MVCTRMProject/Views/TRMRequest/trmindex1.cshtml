@@ -1,0 +1,52 @@
+﻿
+@{
+//Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>trmindex1</title>
+</head>
+<body>
+    <form method="post">
+
+
+        <h1>@ViewBag.text</h1>
+        <table border="1">
+            <tr>
+                <td>
+                    Request Name
+                </td>
+                <td>
+                    Skill
+                </td>
+                <td>
+                    Start Date
+                </td>
+                <td>
+                    End Date
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="rname" />
+                </td>
+                <td>
+                    <input type="text" name="skill" />
+                </td>
+                <td>
+                    <input type="date" name="sdate" />
+                </td>
+                <td>
+                    <input type="date" name="edate" />
+                </td>
+            </tr>
+        </table><br /><br />
+        <input type="submit" value="SUBMIT" />
+
+    </form>
+</body>
+</html>
