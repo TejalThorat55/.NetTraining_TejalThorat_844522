@@ -1,0 +1,46 @@
+﻿@model List<SelectListItem>
+
+@{
+//Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Project</title>
+</head>
+<body>
+    <form method="post">
+        <div>
+            <h1> Choose The Project.. </h1><br />
+            <table>
+                <tr>
+                    <td>
+                        <h4>Project Name&nbsp;&nbsp;</h4>
+                    </td>
+                    <td>
+                        @Html.DropDownList("proj", Model)
+                    </td>
+                </tr>
+            </table>
+            <br /><br />
+
+            @*<ul>
+                    @foreach(var obj in Model.itemlist)
+                    {
+                        <li>
+                            <a href="\Main\Tester?pid=@obj.ProjectId&rid=@obj.RoleId">@obj.ProjectName</a>
+                        </li>
+                    }
+                </ul>*@
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="NEXT" />
+        </div>
+    </form>
+</body>
+</html>
+
+
+

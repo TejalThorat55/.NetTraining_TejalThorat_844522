@@ -1,0 +1,52 @@
+﻿@model MVCIssueTrackerCode.Models.DataView
+
+@{
+//Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TesterAddBug</title>
+</head>
+<body>
+    @using (Html.BeginForm("TesterAddBug", "Main", FormMethod.Post))
+    {
+
+        <table border="1">
+            <tr>
+                <td>
+                    Bug Title
+                </td>
+                <td>
+                    Priority
+                </td>
+
+                <td>
+                    Comments
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextBoxFor(m => m.BugTitle)
+                    @Html.ValidationMessageFor(m => m.BugTitle)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Priority)
+                    @Html.ValidationMessageFor(m => m.Priority)
+                </td>
+
+                <td>
+                    @Html.TextAreaFor(m => m.Comments)
+                    @Html.ValidationMessageFor(m => m.Comments)
+                </td>
+            </tr>
+        </table><br /><br />
+        <input type="submit" value="SUBMIT" />
+    }
+</body>
+</html>
+
+

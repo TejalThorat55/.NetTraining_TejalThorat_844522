@@ -1,0 +1,99 @@
+﻿@model List<MVCIssueTrackerCode.Models.DataView>
+
+@{
+//Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Developer</title>
+</head>
+<body>
+    <div>
+        <h1>Developer Functionality...</h1>
+        <br />
+        <table border="1">
+            <tr>
+                <td>
+                    Bug Id
+                </td>
+                <td>
+                    Bug Title
+                </td>
+                <td>
+                    Priority
+                </td>
+                <td>
+                    Tester Id
+                </td>
+                <td>
+                    Developer Id
+                </td>
+                <td>
+                    Project Id
+                </td>
+                <td>
+                    Status
+                </td>
+                <td>
+
+                    Raised Date
+                </td>
+                <td>
+                    Comment Details
+                </td>
+                <td>
+                    .....
+                </td>
+            </tr>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>
+                        @i.BugId
+                    </td>
+                    <td>
+                        @i.BugTitle
+                    </td>
+                    <td>
+                        @i.Priority
+                    </td>
+                    <td>
+                        @i.TesterId
+                    </td>
+                    <td>
+                        @i.DeveloperId
+                    </td>
+                    <td>
+                        @i.ProjectId
+                    </td>
+                    <td>
+                        @i.Status
+                    </td>
+                    <td>
+                        @i.RaisedDate
+                    </td>
+                    <td>
+                        <a href="~/Main/Comments?bid=@i.BugId">View Comments</a>
+                    </td>
+                    <td>
+                        @if (i.Status == "ASSIGNED")
+                        {
+                            <a href="~/Main/DeveloperResolve?bid=@i.BugId">Resolve</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+        <br /><br />
+        <a href="~/Home/Index"> Logout </a>
+    </div>
+</body>
+</html>
+
+
+
+

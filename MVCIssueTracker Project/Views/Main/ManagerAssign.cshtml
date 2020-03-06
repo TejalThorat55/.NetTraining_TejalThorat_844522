@@ -1,0 +1,45 @@
+﻿@model MVCIssueTrackerCode.Models.DataView
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ManagerAssign</title>
+</head>
+<body>
+    @using (Html.BeginForm("ManagerAssign", "Main", FormMethod.Post))
+    {
+        <table border="1">
+            <tr>
+                <td>
+                    Assigning To Developer:
+                </td>
+                <td>
+                    Comments
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextBoxFor(m => m.at)
+                    <br />
+                    @Html.ValidationMessageFor(m => m.at)
+                </td>
+                <td>
+                    @Html.TextAreaFor(m => m.atc)
+                    <br />
+                    @Html.ValidationMessageFor(m => m.atc)
+                </td>
+            </tr>
+        </table>
+        <br /><br />
+        <input type="submit" value="SUBMIT" />
+    }
+</body>
+</html>
+
+

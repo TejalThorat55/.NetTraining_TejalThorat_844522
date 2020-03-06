@@ -1,0 +1,76 @@
+﻿@model List<MVCIssueTrackerCode.Models.HistoryModel>
+
+@{
+//Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Comments</title>
+</head>
+<body>
+    <div>
+        <h1>Comments History</h1>
+        <br />
+        <table border="1">
+            <tr>
+                <td>
+                    Comment Id
+                </td>
+                <td>
+                    Bug Id
+                </td>
+                <td>
+                    Commented By
+                </td>
+                <td>
+                    Comments
+                </td>
+                <td>
+                    Commented Date
+                </td>
+            </tr>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>
+                        @i.CommentId
+                    </td>
+                    <td>
+                        @i.BugId
+                    </td>
+                    <td>
+                        @i.CommentedBy
+                    </td>
+                    <td>
+                        @i.Comments
+                    </td>
+                    <td>
+                        @i.CommentedDate
+                    </td>
+                    <td></td>
+                </tr>
+            }
+        </table>
+        <br /><br />
+        @if (ViewBag.RID == 1)
+        {
+            <a href="~/Main/Tester?PID=@ViewBag.PID">Back to Tester Home</a>
+        }
+        else if (ViewBag.RID == 2)
+        {
+            <a href="~/Main/Manager?PID=@ViewBag.PID">Back to Manager Home</a>
+        }
+        else if (ViewBag.RID == 3)
+        {
+            <a href="~/Main/Developer?PID=@ViewBag.PID">Back to Developer Home</a>
+        }
+    </div>
+</body>
+</html>
+
+
+
